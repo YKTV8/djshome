@@ -1,12 +1,14 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
-
 /*
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+@keyframes spin {
+    from {background-color: #007DE8;}
+    to{background-color: #A1C3DB;}
+  }
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -24,16 +26,26 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-
-}
+  }
 #wrapper{
-	background-color: #007de8;
+	background-repeat: no-repeat;
+    /* Created with https://www.css-gradient.com */
+    background: #007DE8;
+    background: -webkit-radial-gradient(bottom right, #A1C3DB, #007DE8);
+    background: -moz-radial-gradient(bottom right, #A1C3DB, #007DE8);
+    background: radial-gradient(to top left, #A1C3DB, #007DE8);
+	animation-name: spin;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
 }
 .inner img{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: #ffffff 4px solid;
+	/* border: #ffffff 4px solid; */
+	border-top: #007DE8 2px solid;
+	border-bottom: #a1c3db 2px solid ;
 	width: 70%;
 	height: 85%;
 }
@@ -163,7 +175,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #f2849e !important;
+			color: #202233 !important;
 		}
 
 	strong, b {
@@ -1868,8 +1880,8 @@ input, select, textarea {
 			}
 
 			.icon.style2:hover {
-				color: #f2849e;
-				border-color: #f2849e;
+				color: #202233;
+				border-color: #202233;
 			}
 
 			.icon.style2:active {
@@ -2506,8 +2518,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			color: #f2849e !important;
-			box-shadow: inset 0 0 0 2px #f2849e;
+			color: #202233 !important;
+			box-shadow: inset 0 0 0 2px #202233;
 		}
 
 		input[type="submit"]:active,
@@ -2549,7 +2561,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #f2849e;
+				background-color: #202233;
 			}
 
 			input[type="submit"].primary:active,
@@ -2557,7 +2569,7 @@ input, select, textarea {
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #ee5f81;
+				background-color: #202233;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
